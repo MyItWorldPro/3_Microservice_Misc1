@@ -23,9 +23,8 @@ public class Api1Controller {
     }
 	
 	@GetMapping("/getParallelCallData")
-    public ResponseEntity<String> getParallelCallData() {
-
-        return ResponseEntity.ok("getParallelCallData");
+    public ResponseEntity<List<String>> getParallelCallData() {
+		return ResponseEntity.ok(api1Service.parallelCallData());
     }
 	
 }
