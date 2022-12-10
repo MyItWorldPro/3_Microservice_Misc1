@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class Api2Controller {
 	
 	@GetMapping("/getApi2Data")
-    public ResponseEntity<String> fetchEmpById() {
+    public ResponseEntity<String> getApi2Data() throws InterruptedException {
+		Thread.sleep(3000); //sleep for 3 seconds
         return ResponseEntity.ok("API 2 Data");
     }
 
